@@ -8,7 +8,27 @@ const routes = [
   {
     path: "/dashboard",
     name: "dashboard",
-    component: Dashboard
+    component: Dashboard,
+    children: [
+      {
+        path: "search",
+        name: "search",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/search")
+      },
+      {
+        path: "search",
+        name: "search",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/search")
+      },
+      {
+        path: "view/:sym",
+        name: "search",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/search")
+      }
+    ]
   }
   // {
   //   path: "/about",
