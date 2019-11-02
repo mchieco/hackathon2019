@@ -12,7 +12,7 @@ async function search(word) {
     let name = String(obj.Name)
       .toLowerCase()
       .trim();
-    if (total <= 10 && name.includes(searchWord)) {
+    if (total <= 15 && name.includes(searchWord)) {
       total = total + 1;
       return true;
     } else {
