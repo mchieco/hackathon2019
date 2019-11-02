@@ -2,10 +2,10 @@
     <div class="pa-4">
     <p>Total Amount of Stocks Owned: {{ stocks }}</p>
     <div id="chart">
-      <apexchart type=line height=275 :options="chartOptions1" :series="series1" />
+      <apexchart type=line height="290" :options="chartOptions1" :series="series1" />
     </div>
     <div id="chart">
-      <apexchart type=line height=275 :options="chartOptions2" :series="series2" />
+      <apexchart type=line height="290" :options="chartOptions2" :series="series2" />
     </div>
     <v-layout justify-center>
     <div>
