@@ -10,7 +10,7 @@ const getPrices = async (sym, cache = 1000 * 60 * 60 * 24) => {
   let cached = await saveService.get(stock);
   let result = null;
   if (cached == null || new Date().valueOf() - cached["date"] >= cache) {
-    result = sendRequest(stock);
+    result = await sendRequest(stock);
     saveService.set(stock, { date: new Date().valueOf(), data: result });
   } else {
     result = cached.data;
