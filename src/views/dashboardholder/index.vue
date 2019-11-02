@@ -30,7 +30,7 @@
             append-icon=""
           >
             <template v-slot:activator>
-              <v-list-item>
+              <v-list-item :to="item.path">
                 <v-list-item-content>
                   <v-list-item-title>
                     {{ item.text }}
@@ -38,7 +38,7 @@
                 </v-list-item-content>
               </v-list-item>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link>
+            <v-list-item :to="item.path" v-for="(child, i) in item.children" :key="i" link>
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
@@ -49,7 +49,7 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-          <v-list-item v-else :key="item.text" link>
+          <v-list-item :to="item.path" v-else :key="item.text" link>
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -97,8 +97,8 @@ export default {
       mini: false
     },
     items: [
-      { icon: "mdi-magnify", text: "Search Stocks", name:"search" },
-      { icon: "mdi-account", text: "My Account",name:"myaccount" },
+      { icon: "mdi-magnify", text: "Search Stocks", name:"search", path: "/dashboard/search" },
+      { icon: "mdi-account", text: "My Account",name:"myaccount", path: "/dashboard/myaccount" },
     ],
     footer: {
       inset: true,
