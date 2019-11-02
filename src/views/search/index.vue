@@ -45,7 +45,12 @@
         >Publish</v-btn
       > -->
             <v-spacer />
-            <v-btn class="white--text" width="100" color="blue" depressed @click="goToStock(result.Symbol)"
+            <v-btn
+              class="white--text"
+              width="100"
+              color="blue"
+              depressed
+              @click="goToStock(result.Symbol)"
               >View Stock</v-btn
             >
           </v-card-actions>
@@ -68,8 +73,8 @@ export default {
       let results = await searchService(this.searchFor);
       this.results = results;
     },
-    goToStock(sym){
-        this.$router.push({"name":"stock",params:{'sym':sym}})
+    goToStock(sym) {
+      this.$router.push({ name: "stock", params: { sym: sym } });
     }
   },
   watch: {
