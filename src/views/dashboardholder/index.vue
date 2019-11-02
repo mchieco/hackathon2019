@@ -11,7 +11,12 @@
       overflow
     />
 
-    <v-app-bar :clipped-left="primaryDrawer.clipped" app>
+    <v-app-bar
+      :clipped-left="primaryDrawer.clipped"
+      app
+      color="blue darken-2"
+      dark
+    >
       <v-app-bar-nav-icon
         v-if="primaryDrawer.type !== 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
@@ -20,7 +25,7 @@
     </v-app-bar>
 
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
 
     <v-footer :inset="footer.inset" app>

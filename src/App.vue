@@ -1,5 +1,5 @@
 <template>
   <v-app id="sandbox">
-    <router-view/>
+    <router-view />
   </v-app>
 </template>
