@@ -1,6 +1,6 @@
 <template>
     <div class="pa-4">
-    <p>Total Amount of Stocks Owned: {{ stocks }}</p>
+    <p>Total Amount of Stocks Owned: {{  }}</p>
     <div id="chart">
       <apexchart type=line height="290" :options="chartOptions1" :series="series1" />
     </div>
@@ -18,6 +18,7 @@
 
 <script>
 export default {
+    props: ['sym'],
   data: function() {
     return {
         series1: [{
