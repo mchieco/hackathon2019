@@ -29,7 +29,7 @@
     <v-dialog v-model="dialogbuy" persistent max-width="600px">
       <v-card>
         <v-card-title>
-          <span class="headline">User Profile</span>
+          <span class="headline">Buy Stock</span>
         </v-card-title>
         <v-card-text>
           <v-container>
