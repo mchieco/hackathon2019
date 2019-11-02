@@ -1,10 +1,10 @@
 import Vue from "vue";
-import ApexCharts from 'apexcharts'
+import VueApexCharts from 'vue-apexcharts'
 import VueRouter from "vue-router";
 import Dashboard from "../views/dashboardholder";
 
 Vue.use(VueRouter);
-Vue.use(ApexCharts);
+Vue.component('apexchart', VueApexCharts)
 
 const routes = [
   {
