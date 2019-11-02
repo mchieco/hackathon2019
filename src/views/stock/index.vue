@@ -7,6 +7,12 @@
       :options="chartOptions1"
       :series="series1"
     />
+    <apexchart
+      type="line"
+      height="290"
+      :options="chartOptions2"
+      :series="series2"
+    />
     <v-layout justify-center>
       <div>
         <v-btn
@@ -91,7 +97,7 @@ export default {
           }
         },
         xaxis: {
-          categories: ["notworking", "date2", "date3", "date4", "date5"]
+          categories: []
         }
       }
     };
@@ -111,11 +117,22 @@ export default {
         console.log(key, x[key]);
         last7data.push(Number(x[key]["1. open"]));
       }
+      let secondSet = Object.keys(x);
+      let AHHHH = [];
+      secondSet.forEach(key => {
+        AHHHH.push(x[key]["1. open"]);
+      });
       console.log(last7, last7data);
       this.series1 = [
         {
           name: "Price",
           data: last7data
+        }
+      ];
+      this.series2 = [
+        {
+          name: "Price",
+          data: AHHHH
         }
       ];
       this.chartOptions1.xaxis.categories = last7;
