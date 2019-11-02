@@ -103,7 +103,7 @@ export default {
           }
         },
         dataLabels: {
-          enabled: true
+          enabled: false
         },
         stroke: {
           curve: "straight"
