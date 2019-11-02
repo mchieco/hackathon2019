@@ -26,6 +26,7 @@ const routes = [
       },
       {
         path: "view/:sym",
+        props: true,
         name: "stock",
         component: () =>
           import(/* webpackChunkName: "about" */ "../views/stock")

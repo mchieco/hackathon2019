@@ -101,7 +101,7 @@ export default {
       { icon: "mdi-account", text: "My Account",name:"myaccount" },
     ],
     footer: {
-      inset: false
+      inset: true,
     }
   }),
   methods:{
