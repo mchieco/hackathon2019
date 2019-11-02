@@ -3,7 +3,7 @@ function get(key) {
   // Retrieve the object from storage
   var retrievedObject = localStorage.getItem(key);
   if (retrievedObject == null) {
-    return (retrievedObject = {});
+    return (retrievedObject = { dead: true });
   } else {
     return JSON.parse(retrievedObject);
   }
