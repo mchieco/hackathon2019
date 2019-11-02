@@ -45,7 +45,7 @@ export default {
       mini: false
     },
     footer: {
-      inset: false
+      inset: true,
     }
   })
 };

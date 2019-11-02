@@ -1,11 +1,18 @@
 <template>
+    <div class="pa-4">
+    <p>Total Amount of Stocks Owned: {{ stocks }}</p>
+    <div id="chart">
+      <apexchart type=line height=275 :options="chartOptions1" :series="series1" />
+    </div>
+    <div id="chart">
+      <apexchart type=line height=275 :options="chartOptions2" :series="series2" />
+    </div>
+    <v-layout justify-center>
     <div>
-    <div id="chart">
-      <apexchart type=line height=300 :options="chartOptions1" :series="series1" />
+        <v-btn rounded large color="green" style="margin-right:20px; color: white;">Buy</v-btn>
+        <v-btn rounded large color="red" style="color: white;">Sell</v-btn>
     </div>
-    <div id="chart">
-      <apexchart type=line height=300 :options="chartOptions2" :series="series2" />
-    </div>
+    </v-layout>
     </div>
 </template>
 
