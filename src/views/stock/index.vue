@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <p>Total Amount of Stocks Owned: {{ sym }}</p>
+  <div class="pa-4">
+    <p>Current Stock: {{ sym }}</p>
     <apexchart
       type="line"
       height="290"
